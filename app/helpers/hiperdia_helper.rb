@@ -1,0 +1,2 @@
+module HiperdiaHelper
+end

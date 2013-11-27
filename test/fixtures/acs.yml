@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: MyString
+  sinan: 1
+  endereco: MyString
+  idade: 1
+  sexo: MyString
+
+two:
+  nome: MyString
+  sinan: 1
+  endereco: MyString
+  idade: 1
+  sexo: MyString

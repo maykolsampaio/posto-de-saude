@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codigo: 1
+  endereco: MyString
+  numero: 1
+  bairro: MyString
+  cep: 1
+  municipio: MyString
+  segmento: 1
+  area: 1
+  microarea: 1
+  data: 2013-11-01
+  tipocasa: MyString
+  comodos: 1
+  energia_eletrica: MyString
+  destino_lixo: MyString
+  tratamento_agua: MyString
+  abastecimento_agua: MyString
+  destino_fezes_urina: MyString
+  plano_saude: MyString
+  pessoas_plano: 1
+  nome_plano: MyString
+  caso_doenca: MyString
+  meio_comunicacao: MyString
+  participa_cooperativa: MyString
+  participa_grupo_religioso: MyString
+  transporte: MyString
+
+two:
+  codigo: 1
+  endereco: MyString
+  numero: 1
+  bairro: MyString
+  cep: 1
+  municipio: MyString
+  segmento: 1
+  area: 1
+  microarea: 1
+  data: 2013-11-01
+  tipocasa: MyString
+  comodos: 1
+  energia_eletrica: MyString
+  destino_lixo: MyString
+  tratamento_agua: MyString
+  abastecimento_agua: MyString
+  destino_fezes_urina: MyString
+  plano_saude: MyString
+  pessoas_plano: 1
+  nome_plano: MyString
+  caso_doenca: MyString
+  meio_comunicacao: MyString
+  participa_cooperativa: MyString
+  participa_grupo_religioso: MyString
+  transporte: MyString

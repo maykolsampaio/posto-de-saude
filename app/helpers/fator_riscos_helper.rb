@@ -1,0 +1,2 @@
+module FatorRiscosHelper
+end

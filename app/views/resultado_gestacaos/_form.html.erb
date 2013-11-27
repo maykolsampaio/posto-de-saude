@@ -1,0 +1,29 @@
+<%= form_for(@resultado_gestacao) do |f| %>
+  <% if @resultado_gestacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resultado_gestacao.errors.count, "error") %> prohibited this resultado_gestacao from being saved:</h2>
+
+      <ul>
+      <% @resultado_gestacao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nv %><br>
+    <%= f.text_field :nv %>
+  </div>
+  <div class="field">
+    <%= f.label :nm %><br>
+    <%= f.text_field :nm %>
+  </div>
+  <div class="field">
+    <%= f.label :ab %><br>
+    <%= f.text_field :ab %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

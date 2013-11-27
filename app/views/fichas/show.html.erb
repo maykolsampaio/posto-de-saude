@@ -1,0 +1,133 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="span6">
+<p>
+  <strong>Endereco:</strong>
+  <%= @ficha.endereco %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @ficha.numero %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @ficha.bairro %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @ficha.cep %>
+</p>
+
+<p>
+  <strong>Municipio:</strong>
+  <%= @ficha.municipio %>
+</p>
+
+<p>
+  <strong>Segmento:</strong>
+  <%= @ficha.segmento %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @ficha.area %>
+</p>
+
+<p>
+  <strong>Microarea:</strong>
+  <%= @ficha.microarea %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @ficha.data %>
+</p>
+
+<p>
+  <strong>Tipocasa:</strong>
+  <%= @ficha.tipocasa %>
+</p>
+<p>
+  <strong>Comodos:</strong>
+  <%= @ficha.comodos %>
+</p>
+
+<p>
+  <strong>Energia eletrica:</strong>
+  <%= @ficha.energia_eletrica %>
+</p>
+
+</div>
+<div class="span6">
+
+<p>
+  <strong>Destino lixo:</strong>
+  <%= @ficha.destino_lixo %>
+</p>
+
+<p>
+  <strong>Tratamento agua:</strong>
+  <%= @ficha.tratamento_agua %>
+</p>
+
+<p>
+  <strong>Abastecimento agua:</strong>
+  <%= @ficha.abastecimento_agua %>
+</p>
+
+<p>
+  <strong>Destino fezes urina:</strong>
+  <%= @ficha.destino_fezes_urina %>
+</p>
+
+<p>
+  <strong>Plano saude:</strong>
+  <%= @ficha.plano_saude %>
+</p>
+
+<p>
+  <strong>Pessoas plano:</strong>
+  <%= @ficha.pessoas_plano %>
+</p>
+
+<p>
+  <strong>Nome plano:</strong>
+  <%= @ficha.nome_plano %>
+</p>
+
+<p>
+  <strong>Caso doenca:</strong>
+  <%= @ficha.caso_doenca %>
+</p>
+
+<p>
+  <strong>Meio comunicacao:</strong>
+  <%= @ficha.meio_comunicacao %>
+</p>
+
+<p>
+  <strong>Participa cooperativa:</strong>
+  <%= @ficha.participa_cooperativa %>
+</p>
+
+<p>
+  <strong>Participa grupo religioso:</strong>
+  <%= @ficha.participa_grupo_religioso %>
+</p>
+
+<p>
+  <strong>Transporte:</strong>
+  <%= @ficha.transporte %>
+</p>
+</div>
+
+</div>
+
+<br><br>
+
+<%= link_to 'Editar', edit_ficha_path(@ficha), :class=>"btn btn-primary"  %> |
+<%= link_to 'Voltar', fichas_path, :class=>"btn btn-primary"  %>

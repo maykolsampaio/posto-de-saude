@@ -1,0 +1,39 @@
+<h1>Listing gestacaos</h1>
+<hr>
+<div class="row">
+<div class="span1">
+
+<%= link_to 'Novo', new_gestacao_path, :class=>"btn btn-primary" %>
+</div>
+<div class="span5">
+<%= link_to 'Voltar', gestacaos_path, :class=>"btn btn-primary" %>
+</div>
+</div>
+<table class="table table-bodered table-hover display">  <thead>
+    <tr>
+      <th>Mes</th>
+      <th>Estado nutricional</th>
+      <th>Pre natal</th>
+      <th>Visita acs</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gestacaos.each do |gestacao| %>
+      <tr>
+        <td><%= gestacao.mes %></td>
+        <td><%= gestacao.estado_nutricional %></td>
+        <td><%= gestacao.pre_natal %></td>
+        <td><%= gestacao.visita_acs %></td>
+        <td><%= link_to 'Show', gestacao %></td>
+        <td><%= link_to 'Edit', edit_gestacao_path(gestacao) %></td>
+        <td><%= link_to 'Destroy', gestacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

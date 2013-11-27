@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ano: 1
+  data_da_visita: 2013-11-07
+  reacoes_indesejaveis: MyString
+  data_da_ultima_consulta: 2013-11-07
+  exame_escarro: MyString
+  comunicantes_examinados: MyString
+  bcg_menor_cinco_anos: 1
+  comunicantes_existentes: 1
+  comunicantes_examinados: 1
+  comunicantes_menor_cinco_anos: 1
+
+two:
+  ano: 1
+  data_da_visita: 2013-11-07
+  reacoes_indesejaveis: MyString
+  data_da_ultima_consulta: 2013-11-07
+  exame_escarro: MyString
+  comunicantes_examinados: MyString
+  bcg_menor_cinco_anos: 1
+  comunicantes_existentes: 1
+  comunicantes_examinados: 1
+  comunicantes_menor_cinco_anos: 1

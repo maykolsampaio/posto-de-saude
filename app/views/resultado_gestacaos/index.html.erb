@@ -1,0 +1,31 @@
+<h1>Listing resultado_gestacaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nv</th>
+      <th>Nm</th>
+      <th>Ab</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resultado_gestacaos.each do |resultado_gestacao| %>
+      <tr>
+        <td><%= resultado_gestacao.nv %></td>
+        <td><%= resultado_gestacao.nm %></td>
+        <td><%= resultado_gestacao.ab %></td>
+        <td><%= link_to 'Show', resultado_gestacao %></td>
+        <td><%= link_to 'Edit', edit_resultado_gestacao_path(resultado_gestacao) %></td>
+        <td><%= link_to 'Destroy', resultado_gestacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resultado gestacao', new_resultado_gestacao_path %>

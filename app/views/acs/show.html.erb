@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @ac.nome %>
+</p>
+
+<p>
+  <strong>Sinan:</strong>
+  <%= @ac.sinan %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @ac.endereco %>
+</p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @ac.idade %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @ac.sexo %>
+</p>
+
+<%= link_to 'Edit', edit_ac_path(@ac) %> |
+<%= link_to 'Back', acs_path %>

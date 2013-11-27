@@ -1,0 +1,156 @@
+<%= form_for(@ficha) do |f| %>
+<% if @ficha.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@ficha.errors.count, "error") %> prohibited this ficha from being saved:</h2>
+
+  <ul>
+    <% @ficha.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="row">
+  <div class="field span7">
+    <%= f.label :endereco %>
+    <%= f.text_field :endereco, :class =>"span7" %>
+  </div>
+  <div class="field span2">
+    <%= f.label :numero %>
+    <%= f.number_field :numero, :class =>"span2" %>
+  </div>
+  <div class="field span2">
+    <%= f.label :bairro %>
+    <%= f.text_field :bairro %>
+  </div>
+</div>
+<div class="row">
+  <div class="field span2">
+    <%= f.label :cep %>
+    <%= f.number_field :cep, :class =>"span2" %>
+  </div>
+  <div class="field span3">
+    <%= f.label :municipio %>
+    <%= f.text_field :municipio, :class =>"span3" %>
+  </div>
+  <div class="field span2">
+    <%= f.label :segmento %>
+    <%= f.number_field :segmento, :class =>"span2" %>
+  </div>
+  <div class="field span2">
+    <%= f.label :area %>
+    <%= f.number_field :area, :class =>"span2" %>
+  </div>
+  <div class="field span2">
+    <%= f.label :microarea %>
+    <%= f.number_field :microarea, :class =>"span2" %>
+  </div>
+  <div class="field span12">
+    <%= f.label :data %>
+    <%= f.date_select :data, :class =>"span12" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field span3">
+    <%= label_tag "Tipo Casa" %>
+    <%= f.text_field :tipocasa, :class =>"span3" %>
+  </div>
+  <div class="field span1">
+    <%= f.label :comodos %>
+    <%= f.number_field :comodos, :class =>"span1" %>
+  </div>
+  <div class="field span2">
+    <%= f.label :energia_eletrica %>
+    <div class="row">
+      <div class="span1"><%= label_tag "Sim" %><%= radio_button("ficha", "energia_eletrica", "Sim") %></div>
+      <div class="span1"><%= label_tag "Não" %><%= radio_button("ficha", "energia_eletrica", "Não") %></div>
+    </div>   
+  </div>
+  <div class="field span4">
+    <%= label_tag "Destino Fezes/Urina" %>
+    <%= f.text_field :destino_fezes_urina, :class =>"span4" %>
+  </div>
+    <div class="field span2">
+    <%= f.label :tratamento_agua %>
+    <div class="row">
+      <div class="span1"><%= label_tag "Sim" %><%= radio_button("ficha", "tratamento_agua", "Sim") %></div>
+      <div class="span1"><%= label_tag "Não" %><%= radio_button("ficha", "tratamento_agua", "Não") %></div>
+    </div>
+  </div>
+</div><br>   
+<div class="row">
+  <div class="field span3">
+    <%= f.label :destino_lixo %>
+    <%= f.text_field :destino_lixo, :class =>"span3" %>
+  </div>
+  <div class="field span4">
+    <%= f.label :abastecimento_agua %>
+    <div class="row">
+      <div class="span1"><%= label_tag "Sim" %><%= radio_button("ficha", "abastecimento_agua", "Sim") %></div>
+      <div class="span1"><%= label_tag "Não" %><%= radio_button("ficha", "abastecimento_agua", "Não") %></div>
+    </div>   
+  </div>
+</div><br>
+<div class="row">
+  <div class="field span2">
+    <%= f.label :plano_saude %>
+    <div class="row">
+      <div class="span1"><%= label_tag "Sim" %><%= radio_button("ficha", "plano_saude", "Sim") %></div>
+      <div class="span1"><%= label_tag "Não" %><%= radio_button("ficha", "plano_saude", "Não") %></div>
+    </div>   
+  </div>
+  <div class="field span2">
+    <%= f.label :pessoas_plano %>
+    <%= f.number_field :pessoas_plano, :class =>"span1" %>
+  </div>
+  <div class="field span3">
+    <%= f.label :nome_plano %>
+    <%= f.text_field :nome_plano, :class =>"span3" %>
+  </div>
+  <div class="field span3">
+    <%= f.label :caso_doenca %>
+    <%= f.text_field :caso_doenca, :class =>"span3" %>
+  </div>
+</div><br>
+<div class="row">
+  <div class="field span5">
+    <%= f.label :meio_comunicacao %>
+    <div class="row">
+      <div class="span1"><%= label_tag "Telefone" %><%= check_box("ficha","meio_comunicacao",{},"Telefone","") %></div>
+      <div class="span1"><%= label_tag "TV" %><%= check_box("ficha","meio_comunicacao",{},"TV","") %></div>
+      <div class="span1"><%= label_tag "Internet" %><%= check_box("ficha","meio_comunicacao",{},"Internet","") %></div>
+      <div class="span1"><%= label_tag "Radio" %><%= check_box("ficha","meio_comunicacao",{},"Radio","") %></div>
+    </div>
+  </div>
+  <div class="field span2">
+    <%= f.label :participa_cooperativa %>
+    <div class="row">
+      <div class="span1"><%= label_tag "Sim" %><%= radio_button("ficha", "participa_cooperativa", "Sim") %></div>
+      <div class="span1"><%= label_tag "Não" %><%= radio_button("ficha", "participa_cooperativa", "Não") %></div>
+    </div> 
+    <!--    <%= f.text_field :participa_cooperativa, :class =>"span1" %> -->
+  </div>
+    <div class="field span4">
+    <%= f.label :participa_grupo_religioso %>
+    <div class="span1"><%= label_tag "Sim" %><%= radio_button("ficha", "participa_grupo_religioso", "Sim") %></div>
+    <div class="span1"><%= label_tag "Não" %><%= radio_button("ficha", "participa_grupo_religioso", "Não") %></div>
+    <!--    <%= f.text_field :participa_grupo_religioso, :class =>"span3" %> -->
+  </div>
+</div><br>
+<div class="row">
+  <div class="field span5">
+    <%= f.label :transporte %>
+    <div class="row">
+      <div class="span1"><%= label_tag "Carro" %><%= check_box("ficha","transporte",{},"Carro","") %></div>
+      <div class="span1"><%= label_tag "Moto" %><%= check_box("ficha","transporte",{},"Moto","") %></div>
+      <div class="span1"><%= label_tag "Bicicleta" %><%= check_box("ficha","transporte",{},"Bicicleta","") %></div>
+      <div class="span1"><%= label_tag "Onibus" %><%= check_box("ficha","transporte",{},"Onibus","") %></div>
+    </div>
+  </div>
+</div><br>
+<div class="row">
+<div class="span2">
+<div class="actions ">
+<%= f.submit :class =>"btn btn-primary" %>
+</div>
+<% end %>

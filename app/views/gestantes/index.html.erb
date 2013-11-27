@@ -1,0 +1,48 @@
+<h1>Listing gestantes</h1>
+<div class="row">
+<div class="span1">
+<%= link_to 'Novo', new_gestante_path, :class=>"btn btn-primary" %>
+</div>
+<div class="span5">
+<%= link_to 'Voltar', gestantes_path, :class=>"btn btn-primary" %>
+</div>
+</div>
+<table class="table table-bodered table-hover display">
+  <thead>
+    <tr>
+      <th>Ano</th>
+      <th>Nome</th>
+      <th>Parto</th>
+      <th>Vacina1</th>
+      <th>Vacina2</th>
+      <th>Vacina3</th>
+      <th>Vacinar</th>
+      <th>Puerperio1</th>
+      <th>Puerperio2</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gestantes.each do |gestante| %>
+      <tr>
+        <td><%= gestante.ano %></td>
+        <td><%= gestante.nome %></td>
+        <td><%= gestante.parto %></td>
+        <td><%= gestante.vacina1 %></td>
+        <td><%= gestante.vacina2 %></td>
+        <td><%= gestante.vacina3 %></td>
+        <td><%= gestante.vacinaR %></td>
+        <td><%= gestante.puerperio1 %></td>
+        <td><%= gestante.puerperio2 %></td>
+        <td><%= link_to 'Show', gestante %></td>
+        <td><%= link_to 'Edit', edit_gestante_path(gestante) %></td>
+        <td><%= link_to 'Destroy', gestante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

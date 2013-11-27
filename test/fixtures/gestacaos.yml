@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mes: MyString
+  estado_nutricional: MyString
+  pre_natal: 2013-11-07
+  visita_acs: 2013-11-07
+
+two:
+  mes: MyString
+  estado_nutricional: MyString
+  pre_natal: 2013-11-07
+  visita_acs: 2013-11-07

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @tuberculose.ano %>
+</p>
+
+<p>
+  <strong>Data da visita:</strong>
+  <%= @tuberculose.data_da_visita %>
+</p>
+
+<p>
+  <strong>Reacoes indesejaveis:</strong>
+  <%= @tuberculose.reacoes_indesejaveis %>
+</p>
+
+<p>
+  <strong>Data da ultima consulta:</strong>
+  <%= @tuberculose.data_da_ultima_consulta %>
+</p>
+
+<p>
+  <strong>Exame escarro:</strong>
+  <%= @tuberculose.exame_escarro %>
+</p>
+
+<p>
+  <strong>Comunicantes examinados:</strong>
+  <%= @tuberculose.comunicantes_examinados %>
+</p>
+
+<p>
+  <strong>Bcg menor cinco anos:</strong>
+  <%= @tuberculose.bcg_menor_cinco_anos %>
+</p>
+
+<p>
+  <strong>Comunicantes existentes:</strong>
+  <%= @tuberculose.comunicantes_existentes %>
+</p>
+
+<p>
+  <strong>Comunicantes examinados:</strong>
+  <%= @tuberculose.comunicantes_examinados %>
+</p>
+
+<p>
+  <strong>Comunicantes menor cinco anos:</strong>
+  <%= @tuberculose.comunicantes_menor_cinco_anos %>
+</p>
+
+<%= link_to 'Edit', edit_tuberculose_path(@tuberculose) %> |
+<%= link_to 'Back', tuberculoses_path %>

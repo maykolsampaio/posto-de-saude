@@ -1,0 +1,33 @@
+<%= form_for(@gestacao) do |f| %>
+  <% if @gestacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gestacao.errors.count, "error") %> prohibited this gestacao from being saved:</h2>
+
+      <ul>
+      <% @gestacao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mes %><br>
+    <%= f.text_field :mes %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_nutricional %><br>
+    <%= f.text_field :estado_nutricional %>
+  </div>
+  <div class="field">
+    <%= f.label :pre_natal %><br>
+    <%= f.date_select :pre_natal %>
+  </div>
+  <div class="field">
+    <%= f.label :visita_acs %><br>
+    <%= f.date_select :visita_acs %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

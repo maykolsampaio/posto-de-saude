@@ -1,0 +1,69 @@
+<%= form_for(@hiperdium) do |f| %>
+  <% if @hiperdium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hiperdium.errors.count, "error") %> prohibited this hiperdium from being saved:</h2>
+
+      <ul>
+      <% @hiperdium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero_da_familia %><br>
+    <%= f.number_field :numero_da_familia %>
+  </div>
+  <div class="field">
+    <%= f.label :ano %><br>
+    <%= f.number_field :ano %>
+  </div>
+  <div class="field">
+    <%= f.label :fumante %><br>
+    <%= f.text_field :fumante %>
+  </div>
+  <div class="field">
+    <%= f.label :data_da_visita %><br>
+    <%= f.date_select :data_da_visita %>
+  </div>
+  <div class="field">
+    <%= f.label :dieta %><br>
+    <%= f.text_field :dieta %>
+  </div>
+  <div class="field">
+    <%= f.label :toma_medicacao %><br>
+    <%= f.text_field :toma_medicacao %>
+  </div>
+  <div class="field">
+    <%= f.label :exercicios_fisicos %><br>
+    <%= f.text_field :exercicios_fisicos %>
+  </div>
+  <div class="field">
+    <%= f.label :pa %><br>
+    <%= f.text_field :pa %>
+  </div>
+  <div class="field">
+    <%= f.label :licemia %><br>
+    <%= f.text_field :licemia %>
+  </div>
+  <div class="field">
+    <%= f.label :insulina %><br>
+    <%= f.text_field :insulina %>
+  </div>
+  <div class="field">
+    <%= f.label :hipoglicemiante_oral %><br>
+    <%= f.text_field :hipoglicemiante_oral %>
+  </div>
+  <div class="field">
+    <%= f.label :data_da_ultima_consulta %><br>
+    <%= f.date_select :data_da_ultima_consulta %>
+  </div>
+  <div class="field">
+    <%= f.label :obs %><br>
+    <%= f.text_field :obs %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

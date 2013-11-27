@@ -1,0 +1,40 @@
+<h1>Listing tuberculoses</h1>
+<div class="row">
+<div class="span1">
+<%= link_to 'Novo', new_tuberculose_path, :class=>"btn btn-primary" %>
+</div>
+<div class="span5">
+<%= link_to 'Voltar', tuberculoses_path, :class=>"btn btn-primary" %>
+</div>
+</div>
+<table class="table table-bodered table-hover display">
+  <thead>
+    <tr>
+      <th>Ano</th>
+      <th>Data da visita</th>
+      <th>Reacoes indesejaveis</th>
+      <th>Data da ultima consulta</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tuberculoses.each do |tuberculose| %>
+      <tr>
+        <td><%= tuberculose.ano %></td>
+        <td><%= tuberculose.data_da_visita %></td>
+        <td><%= tuberculose.reacoes_indesejaveis %></td>
+        <td><%= tuberculose.data_da_ultima_consulta %></td>
+        <td><%= link_to 'Show', tuberculose %></td>
+        <td><%= link_to 'Edit', edit_tuberculose_path(tuberculose) %></td>
+        <td><%= link_to 'Destroy', tuberculose, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tuberculose', new_tuberculose_path %>

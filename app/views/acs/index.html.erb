@@ -1,0 +1,35 @@
+<h1>Listing acs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Sinan</th>
+      <th>Endereco</th>
+      <th>Idade</th>
+      <th>Sexo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acs.each do |ac| %>
+      <tr>
+        <td><%= ac.nome %></td>
+        <td><%= ac.sinan %></td>
+        <td><%= ac.endereco %></td>
+        <td><%= ac.idade %></td>
+        <td><%= ac.sexo %></td>
+        <td><%= link_to 'Show', ac %></td>
+        <td><%= link_to 'Edit', edit_ac_path(ac) %></td>
+        <td><%= link_to 'Destroy', ac, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ac', new_ac_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mes:</strong>
+  <%= @gestacao.mes %>
+</p>
+
+<p>
+  <strong>Estado nutricional:</strong>
+  <%= @gestacao.estado_nutricional %>
+</p>
+
+<p>
+  <strong>Pre natal:</strong>
+  <%= @gestacao.pre_natal %>
+</p>
+
+<p>
+  <strong>Visita acs:</strong>
+  <%= @gestacao.visita_acs %>
+</p>
+
+<%= link_to 'Edit', edit_gestacao_path(@gestacao) %> |
+<%= link_to 'Back', gestacaos_path %>

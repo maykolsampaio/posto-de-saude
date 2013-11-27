@@ -1,0 +1,35 @@
+<h1>Listing fator_riscos</h1>
+<hr>
+<div class="row">
+<div class="span1">
+<%= link_to 'Novo', new_fator_risco_path, :class=>"btn btn-primary" %>
+</div>
+<div class="span5">
+<%= link_to 'Voltar', fator_riscos_path, :class=>"btn btn-primary" %>
+</div>
+</div>
+<table class="table table-bodered table-hover display">
+  <thead>
+    <tr>
+      <th>Desc</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fator_riscos.each do |fator_risco| %>
+      <tr>
+        <td><%= fator_risco.desc %></td>
+        <td><%= link_to 'Show', fator_risco %></td>
+        <td><%= link_to 'Edit', edit_fator_risco_path(fator_risco) %></td>
+        <td><%= link_to 'Destroy', fator_risco, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fator risco', new_fator_risco_path %>

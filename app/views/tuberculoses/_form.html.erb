@@ -1,0 +1,57 @@
+<%= form_for(@tuberculose) do |f| %>
+  <% if @tuberculose.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tuberculose.errors.count, "error") %> prohibited this tuberculose from being saved:</h2>
+
+      <ul>
+      <% @tuberculose.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ano %><br>
+    <%= f.number_field :ano %>
+  </div>
+  <div class="field">
+    <%= f.label :data_da_visita %><br>
+    <%= f.date_select :data_da_visita %>
+  </div>
+  <div class="field">
+    <%= f.label :reacoes_indesejaveis %><br>
+    <%= f.text_field :reacoes_indesejaveis %>
+  </div>
+  <div class="field">
+    <%= f.label :data_da_ultima_consulta %><br>
+    <%= f.date_select :data_da_ultima_consulta %>
+  </div>
+  <div class="field">
+    <%= f.label :exame_escarro %><br>
+    <%= f.text_field :exame_escarro %>
+  </div>
+  <div class="field">
+    <%= f.label :comunicantes_examinados %><br>
+    <%= f.text_field :comunicantes_examinados %>
+  </div>
+  <div class="field">
+    <%= f.label :bcg_menor_cinco_anos %><br>
+    <%= f.number_field :bcg_menor_cinco_anos %>
+  </div>
+  <div class="field">
+    <%= f.label :comunicantes_existentes %><br>
+    <%= f.number_field :comunicantes_existentes %>
+  </div>
+  <div class="field">
+    <%= f.label :comunicantes_examinados %><br>
+    <%= f.number_field :comunicantes_examinados %>
+  </div>
+  <div class="field">
+    <%= f.label :comunicantes_menor_cinco_anos %><br>
+    <%= f.number_field :comunicantes_menor_cinco_anos %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

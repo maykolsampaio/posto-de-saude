@@ -1,0 +1,42 @@
+<h1>Listing pessoas</h1>
+<div class="row">
+<div class="span1">
+<%= link_to 'Novo', new_pessoa_path, :class=>"btn btn-primary" %>
+</div>
+<div class="span5">
+<%= link_to 'Voltar', pessoas_path, :class=>"btn btn-primary" %>
+</div>
+</div>
+<table class="table table-bodered table-hover display">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Data de nascimento</th>
+      <th>Idade</th>
+      <th>Sexo</th>
+      <th>Doenca</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pessoas.each do |pessoa| %>
+      <tr>
+        <td><%= pessoa.nome %></td>
+        <td><%= pessoa.data_de_nascimento %></td>
+        <td><%= pessoa.idade %></td>
+        <td><%= pessoa.sexo %></td>
+        <td><%= pessoa.alfabetizado_ou_na_escola %></td>
+        <td><%= pessoa.ocupacao %></td>
+        <td><%= pessoa.doenca %></td>
+        <td><%= link_to 'Show', pessoa %></td>
+        <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
+        <td><%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

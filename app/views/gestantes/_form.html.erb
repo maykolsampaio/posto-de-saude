@@ -1,0 +1,61 @@
+<%= form_for(@gestante) do |f| %>
+  <% if @gestante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gestante.errors.count, "error") %> prohibited this gestante from being saved:</h2>
+
+      <ul>
+      <% @gestante.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ano %><br>
+    <%= f.number_field :ano %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :endereco %><br>
+    <%= f.text_field :endereco %>
+  </div>
+  <div class="field">
+    <%= f.label :ultima_regra %><br>
+    <%= f.date_select :ultima_regra %>
+  </div>
+  <div class="field">
+    <%= f.label :parto %><br>
+    <%= f.date_select :parto %>
+  </div>
+  <div class="field">
+    <%= f.label :vacina1 %><br>
+    <%= f.date_select :vacina1 %>
+  </div>
+  <div class="field">
+    <%= f.label :vacina2 %><br>
+    <%= f.date_select :vacina2 %>
+  </div>
+  <div class="field">
+    <%= f.label :vacina3 %><br>
+    <%= f.date_select :vacina3 %>
+  </div>
+  <div class="field">
+    <%= f.label :vacinaR %><br>
+    <%= f.date_select :vacinaR %>
+  </div>
+  <div class="field">
+    <%= f.label :puerperio1 %><br>
+    <%= f.date_select :puerperio1 %>
+  </div>
+  <div class="field">
+    <%= f.label :puerperio2 %><br>
+    <%= f.date_select :puerperio2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
