@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :numero_da_familia %><br>
-    <%= f.number_field :numero_da_familia %>
+    <%= f.label :unidade %><br>
+    <%= f.text_field :unidade %>
   </div>
   <div class="field">
     <%= f.label :ano %><br>
@@ -24,46 +24,43 @@
     <%= f.text_field :fumante %>
   </div>
   <div class="field">
-    <%= f.label :data_da_visita %><br>
-    <%= f.date_select :data_da_visita %>
+    <%= f.label :visita_acs %><br>
+    <%= f.date_select :visita_acs %>
   </div>
   <div class="field">
     <%= f.label :dieta %><br>
     <%= f.text_field :dieta %>
   </div>
   <div class="field">
-    <%= f.label :toma_medicacao %><br>
-    <%= f.text_field :toma_medicacao %>
+    <%= f.label :medicacao %><br>
+    <%= f.text_field :medicacao %>
   </div>
   <div class="field">
-    <%= f.label :exercicios_fisicos %><br>
-    <%= f.text_field :exercicios_fisicos %>
+    <%= f.label :exercicios %><br>
+    <%= f.text_field :exercicios %>
   </div>
   <div class="field">
-    <%= f.label :pa %><br>
-    <%= f.text_field :pa %>
+    <%= f.label :pressao_arterial %><br>
+    <%= f.text_field :pressao_arterial %>
   </div>
   <div class="field">
-    <%= f.label :licemia %><br>
-    <%= f.text_field :licemia %>
+    <%= f.label :ultima_consulta %><br>
+    <%= f.date_select :ultima_consulta %>
   </div>
   <div class="field">
-    <%= f.label :insulina %><br>
-    <%= f.text_field :insulina %>
+    <%= f.label :mes %><br>
+    <%= f.text_field :mes %>
   </div>
   <div class="field">
-    <%= f.label :hipoglicemiante_oral %><br>
-    <%= f.text_field :hipoglicemiante_oral %>
+    <%= f.label :observacao %><br>
+    <%= f.text_area :observacao %>
   </div>
   <div class="field">
-    <%= f.label :data_da_ultima_consulta %><br>
-    <%= f.date_select :data_da_ultima_consulta %>
+    <%= f.label :pessoa %><br>
+    <%= f.text_field :pessoa %>
   </div>
-  <div class="field">
-    <%= f.label :obs %><br>
-    <%= f.text_field :obs %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="span1 actions">
+     <%= f.submit "Salvar", :class => 'btn btn-primary' %>
   </div>
 <% end %>

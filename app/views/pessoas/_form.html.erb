@@ -1,45 +1,121 @@
 <%= form_for(@pessoa) do |f| %>
-  <% if @pessoa.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pessoa.errors.count, "error") %> prohibited this pessoa from being saved:</h2>
+<% if @pessoa.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@pessoa.errors.count, "error") %> prohibited this pessoa from being saved:</h2>
 
-      <ul>
-      <% @pessoa.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :data_de_nascimento %><br>
-    <%= f.date_select :data_de_nascimento %>
-  </div>
-  <div class="field">
-    <%= f.label :idade %><br>
-    <%= f.number_field :idade %>
-  </div>
-  <div class="field">
-    <%= f.label :sexo %><br>
-    <%= f.text_field :sexo %>
-  </div>
-  <div class="field">
-    <%= f.label :alfabetizado_ou_na_escola %><br>
-    <%= f.text_field :alfabetizado_ou_na_escola %>
-  </div>
-  <div class="field">
-    <%= f.label :ocupacao %><br>
-    <%= f.text_field :ocupacao %>
-  </div>
-  <div class="field">
-    <%= f.label :doenca %><br>
-    <%= f.text_field :doenca %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <ul>
+    <% @pessoa.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
 <% end %>
+<hr>
+<div class="row">
+  <div class="field span5">
+    <%= f.label :nome %>
+    <%= f.text_field :nome, :class => 'span5' %>
+  </div>
+  <div class="field span1">
+    <%= f.label :sexo %>
+    <%= f.text_field :sexo, :class => 'span1' %>
+  </div>
+</div>
+<div class="row">
+  <div class="field span12">
+    <%= f.label :data_nascimento %>
+    <%= f.date_select :data_nascimento %>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="field span2">
+    <%= f.label :alfabetizado %>
+    <%= f.text_field :alfabetizado, :class => 'span2' %>
+  </div>
+  <div class="field span2">
+    <%= f.label :frequenta_escola %>
+    <%= f.text_field :frequenta_escola, :class => 'span2' %>
+  </div>
+  <div class="field span3">
+    <%= f.label :ocupacao %>
+    <%= f.select :ocupacao_id, @ocupacaos.collect { |a| [a.nome, a.id]} %>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="span12">
+    <%= f.label :doencas %>
+    <div class="row">
+      <% for doenca in Doenca.find(:all) %>
+      <div class="span3">
+        <%= check_box_tag "pessoa[doenca_ids][]", doenca.id, @pessoa.doencas.include?(doenca) %>
+        <%= doenca.nome %>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+  
+</div>
+<hr>
+<div class="row">
+  <div class="field span12">
+    <%= f.label :nome_plano_de_saude %>
+    <%= f.text_field :nome_plano_de_saude %>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="field span12">
+    <%= f.label :comunicacao %>
+    <div class="row">
+      <% for comunicacao in Comunicacao.find(:all) %>
+      <div class="span3">
+        <%= check_box_tag "pessoa[comunicacao_ids][]", comunicacao.id, @pessoa.comunicacaos.include?(comunicacao) %>
+        <%= comunicacao.nome %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="field span12">
+    <%= f.label :grupo_comunitario %>
+    <div class="row">
+      <% for grupo_comunitario in GrupoComunitario.find(:all) %>
+      <div class="span3">
+        <%= check_box_tag "pessoa[grupo_comunitario_ids][]", grupo_comunitario.id, @pessoa.grupo_comunitarios.include?(grupo_comunitario) %>
+        <%= grupo_comunitario.nome %>
+      </div>
+      <% end %>
+    </div> 
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="field span12">
+    <%= f.label :transporte %>
+    <div class="row">
+      <% for transporte in Transporte.find(:all) %>
+      <div class="span3">
+        <%= check_box_tag "pessoa[transporte_ids][]", transporte.id, @pessoa.transportes.include?(transporte) %>
+        <%= transporte.nome %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="field span1">
+    <%= f.label :ficha %>
+    <%= f.select :ficha_id, @fichas.collect { |a| [a.ficha, a.id]} %>
+  </div>
+</div>
+<div class="row">
+  <div class="span1 actions">
+   <%= f.submit "Salvar", :class => 'btn btn-primary' %>
+ </div>
+ <% end %>

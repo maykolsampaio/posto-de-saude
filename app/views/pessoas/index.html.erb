@@ -1,20 +1,13 @@
-<h1>Listing pessoas</h1>
-<div class="row">
-<div class="span1">
-<%= link_to 'Novo', new_pessoa_path, :class=>"btn btn-primary" %>
-</div>
-<div class="span5">
-<%= link_to 'Voltar', pessoas_path, :class=>"btn btn-primary" %>
-</div>
-</div>
-<table class="table table-bodered table-hover display">
+<h1>Pessoas</h1>
+<b>Total de Pessoas: <%= @pessoas.count %></b>
+<table id="pessoas" class="table table-bordered table-hover display">
   <thead>
     <tr>
       <th>Nome</th>
-      <th>Data de nascimento</th>
-      <th>Idade</th>
+      <th>Data nascimento</th>
       <th>Sexo</th>
-      <th>Doenca</th>
+      <th>Ocupacao</th>
+      <th>Ficha</th>
       <th></th>
       <th></th>
       <th></th>
@@ -23,20 +16,21 @@
 
   <tbody>
     <% @pessoas.each do |pessoa| %>
-      <tr>
-        <td><%= pessoa.nome %></td>
-        <td><%= pessoa.data_de_nascimento %></td>
-        <td><%= pessoa.idade %></td>
-        <td><%= pessoa.sexo %></td>
-        <td><%= pessoa.alfabetizado_ou_na_escola %></td>
-        <td><%= pessoa.ocupacao %></td>
-        <td><%= pessoa.doenca %></td>
-        <td><%= link_to 'Show', pessoa %></td>
-        <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
-        <td><%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td class="span5"><%= pessoa.nome %></td>
+      <td><%= pessoa.data_nascimento %></td>
+      <td><%= pessoa.sexo %></td>
+      <td><%= pessoa.ocupacao.nome %></td>
+      <td><%= pessoa.ficha.numero %></td>
+      <td><%= link_to 'Exibir', pessoa, :class => 'btn btn-mini btn-info' %></td>
+      <td><%= link_to 'Alterar', edit_pessoa_path(pessoa), :class => 'btn btn-mini' %></td>
+      <td><%= link_to 'Excluir', pessoa, method: :delete, data: { confirm: 'Você tem certeza?' }, :class => 'btn btn-mini btn-danger' %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
+<%= link_to 'Novo', new_pessoa_path, :class => 'btn btn-primary' %>
+<%= link_to 'Voltar', root_path, :class => 'btn btn-primary' %>

@@ -1,0 +1,31 @@
+rails generate scaffold AgenteSaude nome:string endereco:string data_nascimento:date sexo:string
+
+
+rails generate scaffold MicroArea numero:integer agente:references area:references
+
+rails generate scaffold Area numero:integer
+
+
+
+rails generate scaffold Pessoa d nome:string data_nascimento:date sexo:string alfabetizado:string frequenta_escola:string ocupacao:references doencas:references nome_plano_de_saude:string meio_comunicacao:string cooperativa:string religiao:string transporte:string ficha:references
+
+rails generate scaffold Ficha endereco:string numero:string bairro:string cep:string municipio:string segmento:integer area:integer micro_area:integer ficha:integer data:date tipo_casa:string comodos:integer energia_eletrica:string destino_lixo:string tratamento_agua:string abastecimento_agua:string destino_fezes:string
+
+rails generate scaffold Doenca nome:string descricao:text
+
+rails g scaffold Hiperdia unidade:string ano:integer fumante:string visita_acs:date dieta:string medicacao:string exercicios:string pressao_arterial:string ultima_consulta:date mes:references observacao:text pessoa:references
+
+rails g scaffold Mes nome:string
+
+
+rails g scaffold DoencaPessoa data observacao:text
+
+rails g scaffold ocupacao nome:string
+rails g scaffold Cooperativa nome:string
+rails g scaffold Transporte nome:string
+rails g scaffold Religiao nome:string
+rails g scaffold Comunicacao nome:string
+
+
+
+

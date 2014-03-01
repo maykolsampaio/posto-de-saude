@@ -1,0 +1,28 @@
+<h1>Ocupações</h1>
+<b>Total de Ocupações: <%= @ocupacaos.count %></b>
+<table id="ocupacaos" class="table table-bordered table-hover display"  >
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ocupacaos.each do |ocupacao| %>
+      <tr>
+        <td class="span10"><%= ocupacao.nome %></td>
+        <td><%= link_to 'Exibir', ocupacao, :class => 'btn btn-mini btn-info' %></td>
+        <td><%= link_to 'Alterar', edit_ocupacao_path(ocupacao), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Excluir', ocupacao, method: :delete, data: { confirm: 'Você tem certeza?' }, :class => 'btn btn-mini btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo', new_ocupacao_path, :class => 'btn btn-primary' %>
+<%= link_to 'Voltar', root_path, :class => 'btn btn-primary' %>

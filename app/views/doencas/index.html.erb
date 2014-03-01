@@ -1,0 +1,28 @@
+<h1>Doencas</h1>
+<b>Doenças Cadastradas: <%= @doencas.count %></b>
+<table id="doencas" class="table table-bordered table-hover display">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doencas.each do |doenca| %>
+      <tr>
+        <td class="span10"><%= doenca.nome %></td>
+        <td><%= link_to 'Exibir', doenca, :class => 'btn btn-mini btn-info' %></td>
+        <td><%= link_to 'Alterar', edit_doenca_path(doenca), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Excluir', doenca, method: :delete, data: { confirm: 'Você tem certeza?' }, :class => 'btn btn-mini btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo', new_doenca_path, :class => 'btn btn-primary' %>
+<%= link_to 'Voltar', root_path, :class => 'btn btn-primary' %>

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Numero da familia:</strong>
-  <%= @hiperdium.numero_da_familia %>
+  <strong>Unidade:</strong>
+  <%= @hiperdium.unidade %>
 </p>
 
 <p>
@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Data da visita:</strong>
-  <%= @hiperdium.data_da_visita %>
+  <strong>Visita acs:</strong>
+  <%= @hiperdium.visita_acs %>
 </p>
 
 <p>
@@ -26,44 +26,39 @@
 </p>
 
 <p>
-  <strong>Toma medicacao:</strong>
-  <%= @hiperdium.toma_medicacao %>
+  <strong>Medicacao:</strong>
+  <%= @hiperdium.medicacao %>
 </p>
 
 <p>
-  <strong>Exercicios fisicos:</strong>
-  <%= @hiperdium.exercicios_fisicos %>
+  <strong>Exercicios:</strong>
+  <%= @hiperdium.exercicios %>
 </p>
 
 <p>
-  <strong>Pa:</strong>
-  <%= @hiperdium.pa %>
+  <strong>Pressao arterial:</strong>
+  <%= @hiperdium.pressao_arterial %>
 </p>
 
 <p>
-  <strong>Licemia:</strong>
-  <%= @hiperdium.licemia %>
+  <strong>Ultima consulta:</strong>
+  <%= @hiperdium.ultima_consulta %>
 </p>
 
 <p>
-  <strong>Insulina:</strong>
-  <%= @hiperdium.insulina %>
+  <strong>Mes:</strong>
+  <%= @hiperdium.mes %>
 </p>
 
 <p>
-  <strong>Hipoglicemiante oral:</strong>
-  <%= @hiperdium.hipoglicemiante_oral %>
+  <strong>Observacao:</strong>
+  <%= @hiperdium.observacao %>
 </p>
 
 <p>
-  <strong>Data da ultima consulta:</strong>
-  <%= @hiperdium.data_da_ultima_consulta %>
+  <strong>Pessoa:</strong>
+  <%= @hiperdium.pessoa %>
 </p>
 
-<p>
-  <strong>Obs:</strong>
-  <%= @hiperdium.obs %>
-</p>
-
-<%= link_to 'Edit', edit_hiperdium_path(@hiperdium) %> |
-<%= link_to 'Back', hiperdia_path %>
+<%= link_to 'Alterar', edit_hiperdium_path(@hiperdium), :class => 'btn btn-primary' %> |
+<%= link_to 'Voltar', hiperdia_path, :class => 'btn btn-primary' %>

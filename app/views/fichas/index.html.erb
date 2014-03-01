@@ -1,44 +1,30 @@
-<h1>Listar fichas</h1>
-<hr>
-<div class="row">
-<div class="span1">
-<%= link_to 'Novo', new_ficha_path, :class=>"btn btn-primary" %>
-</div>
-<div class="span5">
-<%= link_to 'Voltar', fichas_path, :class=>"btn btn-primary" %>
-</div>
-</div>
-<table class="table table-bodered table-hover display">
+<h1>Fichas A</h1>
+<b>Total de Fichas: <%= @fichas.count %></b>
+<table id="fichas" class="table table-bordered table-hover display" data-source="<%= fichas_url(format: "json") %>">
   <thead>
     <tr>
-      <th>Codigo</th>
-      <th>Endereco</th>
-      <th>Numero</th>
-      <th>Bairro</th>
-      <th>Segmento</th>
-      <th>Area</th>
+      <th>Ficha</th>
+      <th>Micro area</th>
       <th>Data</th>
-      <th>Microarea</th>
-      <th>_______</th>
-      <th>_______</th>
-      <th>_______</th>
+      <th>Tipo casa</th>
+      <th>Comodos</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @fichas.each do |ficha| %>
       <tr>
-        <td><%= ficha.id %></td>
-        <td><%= ficha.endereco %></td>
-        <td><%= ficha.numero %></td>
-        <td><%= ficha.bairro %></td>
-        <td><%= ficha.segmento %></td>
-        <td><%= ficha.area %></td>
-        <td><%= ficha.microarea %></td>
-        <td><%= ficha.data %></td>
-        <td><%= link_to 'Mostrar', ficha %></td>
-        <td><%= link_to 'Editar', edit_ficha_path(ficha) %></td>
-        <td><%= link_to 'Destruir', ficha, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+        <td class="span2"><%= ficha.ficha %></td>
+        <td class="span2"><%= ficha.micro_area %></td>
+        <td class="span2"><%= ficha.data %></td>
+        <td class="span3"><%= ficha.tipo_casa %></td>
+        <td class="span2"><%= ficha.comodos %></td>
+        <td><%= link_to 'Exibir', ficha, :class => 'btn btn-mini btn-info' %></td>
+        <td><%= link_to 'Alterar', edit_ficha_path(ficha), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Excluir', ficha, method: :delete, data: { confirm: 'Você tem certeza?' }, :class => 'btn btn-mini btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -46,3 +32,5 @@
 
 <br>
 
+<%= link_to 'Novo', new_ficha_path, :class => 'btn btn-primary' %>
+<%= link_to 'Voltar', root_path, :class => 'btn btn-primary' %>

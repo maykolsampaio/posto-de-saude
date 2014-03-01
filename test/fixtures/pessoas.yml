@@ -1,19 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  d: MyString
   nome: MyString
-  data_de_nascimento: 2013-11-07
-  idade: 1
+  data_nascimento: 2013-12-03
   sexo: MyString
-  alfabetizado_ou_na_escola: MyString
-  ocupacao: MyString
-  doenca: MyString
+  alfabetizado: MyString
+  frequenta_escola: MyString
+  ocupacao_id: 
+  doencas_id: 
+  nome_plano_de_saude: MyString
+  meio_comunicacao: MyString
+  cooperativa: MyString
+  religiao: MyString
+  transporte: MyString
+  ficha_id: 
 
 two:
+  d: MyString
   nome: MyString
-  data_de_nascimento: 2013-11-07
-  idade: 1
+  data_nascimento: 2013-12-03
   sexo: MyString
-  alfabetizado_ou_na_escola: MyString
-  ocupacao: MyString
-  doenca: MyString
+  alfabetizado: MyString
+  frequenta_escola: MyString
+  ocupacao_id: 
+  doencas_id: 
+  nome_plano_de_saude: MyString
+  meio_comunicacao: MyString
+  cooperativa: MyString
+  religiao: MyString
+  transporte: MyString
+  ficha_id: 

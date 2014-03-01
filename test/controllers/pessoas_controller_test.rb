@@ -18,7 +18,7 @@ class PessoasControllerTest < ActionController::TestCase
 
   test "should create pessoa" do
     assert_difference('Pessoa.count') do
-      post :create, pessoa: { alfabetizado_ou_na_escola: @pessoa.alfabetizado_ou_na_escola, data_de_nascimento: @pessoa.data_de_nascimento, doenca: @pessoa.doenca, idade: @pessoa.idade, nome: @pessoa.nome, ocupacao: @pessoa.ocupacao, sexo: @pessoa.sexo }
+      post :create, pessoa: { alfabetizado: @pessoa.alfabetizado, cooperativa: @pessoa.cooperativa, d: @pessoa.d, data_nascimento: @pessoa.data_nascimento, doencas_id: @pessoa.doencas_id, ficha_id: @pessoa.ficha_id, frequenta_escola: @pessoa.frequenta_escola, meio_comunicacao: @pessoa.meio_comunicacao, nome: @pessoa.nome, nome_plano_de_saude: @pessoa.nome_plano_de_saude, ocupacao_id: @pessoa.ocupacao_id, religiao: @pessoa.religiao, sexo: @pessoa.sexo, transporte: @pessoa.transporte }
     end
 
     assert_redirected_to pessoa_path(assigns(:pessoa))
@@ -35,7 +35,7 @@ class PessoasControllerTest < ActionController::TestCase
   end
 
   test "should update pessoa" do
-    patch :update, id: @pessoa, pessoa: { alfabetizado_ou_na_escola: @pessoa.alfabetizado_ou_na_escola, data_de_nascimento: @pessoa.data_de_nascimento, doenca: @pessoa.doenca, idade: @pessoa.idade, nome: @pessoa.nome, ocupacao: @pessoa.ocupacao, sexo: @pessoa.sexo }
+    patch :update, id: @pessoa, pessoa: { alfabetizado: @pessoa.alfabetizado, cooperativa: @pessoa.cooperativa, d: @pessoa.d, data_nascimento: @pessoa.data_nascimento, doencas_id: @pessoa.doencas_id, ficha_id: @pessoa.ficha_id, frequenta_escola: @pessoa.frequenta_escola, meio_comunicacao: @pessoa.meio_comunicacao, nome: @pessoa.nome, nome_plano_de_saude: @pessoa.nome_plano_de_saude, ocupacao_id: @pessoa.ocupacao_id, religiao: @pessoa.religiao, sexo: @pessoa.sexo, transporte: @pessoa.transporte }
     assert_redirected_to pessoa_path(assigns(:pessoa))
   end
 

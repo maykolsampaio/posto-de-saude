@@ -1,133 +1,139 @@
 <p id="notice"><%= notice %></p>
-
 <div class="row">
-<div class="span6">
-<p>
-  <strong>Endereco:</strong>
-  <%= @ficha.endereco %>
-</p>
-
-<p>
-  <strong>Numero:</strong>
-  <%= @ficha.numero %>
-</p>
-
-<p>
-  <strong>Bairro:</strong>
+  <div class="span5 field">
+    <p>
+      <strong>Endereco:</strong><br>
+      <%= @ficha.endereco %>
+    </p>
+  </div>
+  <div class="span1 field">
+   <p>
+    <strong>Numero:</strong><br>
+    <%= @ficha.numero %>
+  </p>
+</div>
+<div class="span2 field">
+ <p>
+  <strong>Bairro:</strong><br>
   <%= @ficha.bairro %>
 </p>
-
-<p>
-  <strong>Cep:</strong>
+</div>
+<div class="span1 field">
+ <p>
+  <strong>Cep:</strong><br>
   <%= @ficha.cep %>
 </p>
+</div>
+<div class="span2 field">
+  <p>
+    <strong>Municipio:</strong><br>
+    <%= @ficha.municipio %>
+  </p>
+</div>
+</div>
+<hr>
+<div class="row">
+  <div class="span2 field">
+    <p>
+      <strong>Segmento:</strong><br>
+      <%= @ficha.segmento %>
+    </p>
+  </div>
+  <div class="span2 field">
+   <p>
+    <strong>Area:</strong><br>
+    <%= @ficha.area %>
+  </p>
+</div>
+<div class="span2 field">
+  <p>
+    <strong>Micro area:</strong><br>
+    <%= @ficha.micro_area %>
+  </p>
 
-<p>
-  <strong>Municipio:</strong>
-  <%= @ficha.municipio %>
-</p>
+</div>
+<div class="span2 field">
+  <p>
+    <strong>Ficha:</strong><br>
+    <%= @ficha.ficha %>
+  </p>
+</div>
+</div>
+<div class="row">
+  <div class="span12 field">
 
-<p>
-  <strong>Segmento:</strong>
-  <%= @ficha.segmento %>
-</p>
+    <p>
+      <strong>Data:</strong><br>
+      <%= @ficha.data %>
+    </p>
 
-<p>
-  <strong>Area:</strong>
-  <%= @ficha.area %>
-</p>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="span3 field">
+   <p>
+    <strong>Tipo casa:</strong><br>
+    <%= @ficha.tipo_casa %>
+  </p>
 
-<p>
-  <strong>Microarea:</strong>
-  <%= @ficha.microarea %>
-</p>
-
-<p>
-  <strong>Data:</strong>
-  <%= @ficha.data %>
-</p>
-
-<p>
-  <strong>Tipocasa:</strong>
-  <%= @ficha.tipocasa %>
-</p>
-<p>
-  <strong>Comodos:</strong>
+</div>
+<div class="span1 field">
+ <p>
+  <strong>Comodos:</strong><br>
   <%= @ficha.comodos %>
 </p>
 
-<p>
-  <strong>Energia eletrica:</strong>
-  <%= @ficha.energia_eletrica %>
-</p>
-
 </div>
-<div class="span6">
-
-<p>
-  <strong>Destino lixo:</strong>
-  <%= @ficha.destino_lixo %>
-</p>
-
-<p>
-  <strong>Tratamento agua:</strong>
-  <%= @ficha.tratamento_agua %>
-</p>
-
-<p>
-  <strong>Abastecimento agua:</strong>
-  <%= @ficha.abastecimento_agua %>
-</p>
-
-<p>
-  <strong>Destino fezes urina:</strong>
-  <%= @ficha.destino_fezes_urina %>
-</p>
-
-<p>
-  <strong>Plano saude:</strong>
-  <%= @ficha.plano_saude %>
-</p>
-
-<p>
-  <strong>Pessoas plano:</strong>
-  <%= @ficha.pessoas_plano %>
-</p>
-
-<p>
-  <strong>Nome plano:</strong>
-  <%= @ficha.nome_plano %>
-</p>
-
-<p>
-  <strong>Caso doenca:</strong>
-  <%= @ficha.caso_doenca %>
-</p>
-
-<p>
-  <strong>Meio comunicacao:</strong>
-  <%= @ficha.meio_comunicacao %>
-</p>
-
-<p>
-  <strong>Participa cooperativa:</strong>
-  <%= @ficha.participa_cooperativa %>
-</p>
-
-<p>
-  <strong>Participa grupo religioso:</strong>
-  <%= @ficha.participa_grupo_religioso %>
-</p>
-
-<p>
-  <strong>Transporte:</strong>
-  <%= @ficha.transporte %>
-</p>
+<div class="span3 field">
+  <p>
+    <strong>Energia eletrica:</strong><br>
+    <%= @ficha.energia_eletrica %>
+  </p>
 </div>
-
+<div class="span5 field">
+  <p>
+    <strong>Destino lixo:</strong><br>
+    <%= @ficha.destino_lixo %>
+  </p>
 </div>
+</div>
+<div class="row">
+  <div class="span3 field">
 
-<br><br>
+    <p>
+      <strong>Tratamento agua:</strong><br>
+      <%= @ficha.tratamento_agua %>
+    </p>
 
-<%= link_to 'Editar', edit_ficha_path(@ficha), :class=>"btn btn-primary"  %> |
-<%= link_to 'Voltar', fichas_path, :class=>"btn btn-primary"  %>
+  </div>
+  <div class="span3 field">
+
+    <p>
+      <strong>Abastecimento agua:</strong><br>
+      <%= @ficha.abastecimento_agua %>
+    </p>
+  </div>
+  <div class="span3 field">
+    <p>
+      <strong>Destino fezes:</strong><br>
+      <%= @ficha.destino_fezes %>
+    </p>
+  </div>
+</div>
+<div class="row">
+<div class="span12 field">
+  <p>
+    <strong>Total de Pessoas na Família:</strong><br>
+    <%= @ficha.pessoas.count %></b>
+  </p>
+</div>
+</div>
+<p>
+  <% for pessoa in Pessoa.find(:all) %>
+  <%= pessoa.nome %>
+  <% end %>
+</p>
+
+<%= link_to 'Alterar', edit_ficha_path(@ficha), :class => 'btn btn-primary' %> |
+<%= link_to 'Voltar', fichas_path, :class => 'btn btn-primary' %>

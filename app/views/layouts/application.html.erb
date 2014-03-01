@@ -9,21 +9,27 @@
 </head>
 <body>
 	<div class="container">
-		
-
 		<div id="user_nav">
 			<% if user_signed_in? %>
 			Signed in as <%= current_user.email %>. Not you?
 			<%= link_to "Sair", destroy_user_session_path, :method => :delete %>
 			<% else %>
-			<%= link_to "Entre", new_user_registration_path %> or <%= link_to "Entre", new_user_session_path %>
+			<%= link_to "Registrar", new_user_registration_path %> ou <%= link_to "Entrar", new_user_session_path %>
 			<% end %>
 		</div>
-
-
 		<p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p>
-
+<div class="row-fluid">
+		<div class="span3">
+			<%= link_to image_tag("hd1.png", size: "100x100"), root_path %>
+		</div>
+		<div class="span6"><br>
+			<h1 align="center">Posto de Saúde</h1>
+		</div>
+		<div class="span3">
+		</div>
+	</div>
+	<hr>
 		<%= yield %>
 	</div>
 	

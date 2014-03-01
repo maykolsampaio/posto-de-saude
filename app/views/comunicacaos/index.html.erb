@@ -1,0 +1,27 @@
+<h1>Listing comunicacaos</h1>
+<b>Total: <%= @comunicacaos.count %></b>
+<table id="comunicacaos" class="table table-bordered table-hover display">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comunicacaos.each do |comunicacao| %>
+      <tr>
+        <td><%= comunicacao.nome %></td>
+        <td><%= link_to 'Show', comunicacao %></td>
+        <td><%= link_to 'Edit', edit_comunicacao_path(comunicacao) %></td>
+        <td><%= link_to 'Destroy', comunicacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comunicacao', new_comunicacao_path %>

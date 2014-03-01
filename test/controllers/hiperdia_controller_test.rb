@@ -18,7 +18,7 @@ class HiperdiaControllerTest < ActionController::TestCase
 
   test "should create hiperdium" do
     assert_difference('Hiperdium.count') do
-      post :create, hiperdium: { ano: @hiperdium.ano, data_da_ultima_consulta: @hiperdium.data_da_ultima_consulta, data_da_visita: @hiperdium.data_da_visita, dieta: @hiperdium.dieta, exercicios_fisicos: @hiperdium.exercicios_fisicos, fumante: @hiperdium.fumante, hipoglicemiante_oral: @hiperdium.hipoglicemiante_oral, insulina: @hiperdium.insulina, licemia: @hiperdium.licemia, numero_da_familia: @hiperdium.numero_da_familia, obs: @hiperdium.obs, pa: @hiperdium.pa, toma_medicacao: @hiperdium.toma_medicacao }
+      post :create, hiperdium: { ano: @hiperdium.ano, dieta: @hiperdium.dieta, exercicios: @hiperdium.exercicios, fumante: @hiperdium.fumante, medicacao: @hiperdium.medicacao, mes_id: @hiperdium.mes_id, observacao: @hiperdium.observacao, pessoa_id: @hiperdium.pessoa_id, pressao_arterial: @hiperdium.pressao_arterial, ultima_consulta: @hiperdium.ultima_consulta, unidade: @hiperdium.unidade, visita_acs: @hiperdium.visita_acs }
     end
 
     assert_redirected_to hiperdium_path(assigns(:hiperdium))
@@ -35,7 +35,7 @@ class HiperdiaControllerTest < ActionController::TestCase
   end
 
   test "should update hiperdium" do
-    patch :update, id: @hiperdium, hiperdium: { ano: @hiperdium.ano, data_da_ultima_consulta: @hiperdium.data_da_ultima_consulta, data_da_visita: @hiperdium.data_da_visita, dieta: @hiperdium.dieta, exercicios_fisicos: @hiperdium.exercicios_fisicos, fumante: @hiperdium.fumante, hipoglicemiante_oral: @hiperdium.hipoglicemiante_oral, insulina: @hiperdium.insulina, licemia: @hiperdium.licemia, numero_da_familia: @hiperdium.numero_da_familia, obs: @hiperdium.obs, pa: @hiperdium.pa, toma_medicacao: @hiperdium.toma_medicacao }
+    patch :update, id: @hiperdium, hiperdium: { ano: @hiperdium.ano, dieta: @hiperdium.dieta, exercicios: @hiperdium.exercicios, fumante: @hiperdium.fumante, medicacao: @hiperdium.medicacao, mes_id: @hiperdium.mes_id, observacao: @hiperdium.observacao, pessoa_id: @hiperdium.pessoa_id, pressao_arterial: @hiperdium.pressao_arterial, ultima_consulta: @hiperdium.ultima_consulta, unidade: @hiperdium.unidade, visita_acs: @hiperdium.visita_acs }
     assert_redirected_to hiperdium_path(assigns(:hiperdium))
   end
 

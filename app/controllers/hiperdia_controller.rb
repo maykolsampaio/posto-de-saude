@@ -69,6 +69,6 @@ class HiperdiaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hiperdium_params
-      params.require(:hiperdium).permit(:numero_da_familia, :ano, :fumante, :data_da_visita, :dieta, :toma_medicacao, :exercicios_fisicos, :pa, :licemia, :insulina, :hipoglicemiante_oral, :data_da_ultima_consulta, :obs)
+      params.require(:hiperdium).permit(:unidade, :ano, :fumante, :visita_acs, :dieta, :medicacao, :exercicios, :pressao_arterial, :ultima_consulta, :mes_id, :observacao, :pessoa_id)
     end
 end

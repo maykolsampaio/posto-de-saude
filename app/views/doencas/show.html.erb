@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @doenca.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @doenca.descricao %>
+</p>
+<p>
+  <strong>Quantidade:</strong>
+ <%= pluralize @doenca.pessoas.size, "pessoas" %>
+</p>
+<p>
+<% for pessoa in Pessoa.find(:all) %>
+<%= pessoa.nome %>
+<% end %>
+</p>
+<%= link_to 'Alterar', edit_doenca_path(@doenca), :class => 'btn btn-primary' %> |
+<%= link_to 'Voltar', doencas_path, :class => 'btn btn-primary' %>

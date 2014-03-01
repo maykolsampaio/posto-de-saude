@@ -1,23 +1,22 @@
 Posto::Application.routes.draw do
-  resources :resultado_gestacaos
-
-  resources :gestacaos
-
-  resources :fator_riscos
-
-  resources :gestantes
-
-  resources :acs
 
   resources :hiperdia
 
-  resources :tuberculoses
+  resources :grupo_comunitarios
+
+  resources :comunicacaos
+
+  resources :transportes
+
+  resources :fichas
 
   resources :pessoas
 
-  devise_for :users
-  resources :fichas
+  resources :ocupacaos
 
+  resources :doencas
+    
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

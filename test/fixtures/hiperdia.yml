@@ -1,31 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  numero_da_familia: 1
+  unidade: MyString
   ano: 1
   fumante: MyString
-  data_da_visita: 2013-11-07
+  visita_acs: 2013-12-05
   dieta: MyString
-  toma_medicacao: MyString
-  exercicios_fisicos: MyString
-  pa: MyString
-  licemia: MyString
-  insulina: MyString
-  hipoglicemiante_oral: MyString
-  data_da_ultima_consulta: 2013-11-07
-  obs: MyString
+  medicacao: MyString
+  exercicios: MyString
+  pressao_arterial: MyString
+  ultima_consulta: 2013-12-05
+  mes_id: 
+  observacao: MyText
+  pessoa_id: 
 
 two:
-  numero_da_familia: 1
+  unidade: MyString
   ano: 1
   fumante: MyString
-  data_da_visita: 2013-11-07
+  visita_acs: 2013-12-05
   dieta: MyString
-  toma_medicacao: MyString
-  exercicios_fisicos: MyString
-  pa: MyString
-  licemia: MyString
-  insulina: MyString
-  hipoglicemiante_oral: MyString
-  data_da_ultima_consulta: 2013-11-07
-  obs: MyString
+  medicacao: MyString
+  exercicios: MyString
+  pressao_arterial: MyString
+  ultima_consulta: 2013-12-05
+  mes_id: 
+  observacao: MyText
+  pessoa_id: 

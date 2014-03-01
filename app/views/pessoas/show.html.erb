@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @pessoa.id %>
+</p>
+
+<p>
   <strong>Nome:</strong>
   <%= @pessoa.nome %>
 </p>
 
 <p>
-  <strong>Data de nascimento:</strong>
-  <%= @pessoa.data_de_nascimento %>
-</p>
-
-<p>
-  <strong>Idade:</strong>
-  <%= @pessoa.idade %>
+  <strong>Data nascimento:</strong>
+  <%= @pessoa.data_nascimento %>
 </p>
 
 <p>
@@ -21,19 +21,56 @@
 </p>
 
 <p>
-  <strong>Alfabetizado ou na escola:</strong>
-  <%= @pessoa.alfabetizado_ou_na_escola %>
+  <strong>Alfabetizado:</strong>
+  <%= @pessoa.alfabetizado %>
+</p>
+
+<p>
+  <strong>Frequenta escola:</strong>
+  <%= @pessoa.frequenta_escola %>
 </p>
 
 <p>
   <strong>Ocupacao:</strong>
-  <%= @pessoa.ocupacao %>
+  <%= @pessoa.ocupacao.nome %>
 </p>
 
 <p>
-  <strong>Doenca:</strong>
-  <%= @pessoa.doenca %>
+  <strong>Doencas:</strong>
+  <% for doenca in Doenca.find(:all) %>
+  <%= doenca.nome %>
+<% end %>
+</p>
+<p>
+  <strong>Nome plano de saude:</strong>
+  <%= @pessoa.nome_plano_de_saude %>
 </p>
 
-<%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |
-<%= link_to 'Back', pessoas_path %>
+<p>
+  <strong>Meio comunicacao:</strong>
+   <% for comunicacao in Comunicacao.find(:all) %>
+  <%= comunicacao.nome %>
+<% end %>
+</p>
+
+<p>
+  <strong>Grupo Comunitário:</strong>
+  <% for grupo in GrupoComunitario.find(:all) %>
+  <%= grupo.nome %>
+<% end %>
+</p>
+
+<p>
+  <strong>Transporte:</strong>
+  <% for t in Transporte.find(:all) %>
+  <%= t.nome %>
+<% end %>
+</p>
+
+<p>
+  <strong>Ficha:</strong>
+  <%= @pessoa.ficha.ficha %>
+</p>
+
+<%= link_to 'Alterar', edit_pessoa_path(@pessoa), :class => 'btn btn-primary' %> |
+<%= link_to 'Voltar', pessoas_path, :class => 'btn btn-primary' %>

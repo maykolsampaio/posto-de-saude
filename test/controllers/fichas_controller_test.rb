@@ -18,7 +18,7 @@ class FichasControllerTest < ActionController::TestCase
 
   test "should create ficha" do
     assert_difference('Ficha.count') do
-      post :create, ficha: { abastecimento_agua: @ficha.abastecimento_agua, area: @ficha.area, bairro: @ficha.bairro, caso_doenca: @ficha.caso_doenca, cep: @ficha.cep, codigo: @ficha.codigo, comodos: @ficha.comodos, data: @ficha.data, destino_fezes_urina: @ficha.destino_fezes_urina, destino_lixo: @ficha.destino_lixo, endereco: @ficha.endereco, energia_eletrica: @ficha.energia_eletrica, meio_comunicacao: @ficha.meio_comunicacao, microarea: @ficha.microarea, municipio: @ficha.municipio, nome_plano: @ficha.nome_plano, numero: @ficha.numero, participa_cooperativa: @ficha.participa_cooperativa, participa_grupo_religioso: @ficha.participa_grupo_religioso, pessoas_plano: @ficha.pessoas_plano, plano_saude: @ficha.plano_saude, segmento: @ficha.segmento, tipocasa: @ficha.tipocasa, transporte: @ficha.transporte, tratamento_agua: @ficha.tratamento_agua }
+      post :create, ficha: { abastecimento_agua: @ficha.abastecimento_agua, area: @ficha.area, bairro: @ficha.bairro, cep: @ficha.cep, comodos: @ficha.comodos, data: @ficha.data, destino_fezes: @ficha.destino_fezes, destino_lixo: @ficha.destino_lixo, endereco: @ficha.endereco, energia_eletrica: @ficha.energia_eletrica, ficha: @ficha.ficha, micro_area: @ficha.micro_area, municipio: @ficha.municipio, numero: @ficha.numero, segmento: @ficha.segmento, tipo_casa: @ficha.tipo_casa, tratamento_agua: @ficha.tratamento_agua }
     end
 
     assert_redirected_to ficha_path(assigns(:ficha))
@@ -35,7 +35,7 @@ class FichasControllerTest < ActionController::TestCase
   end
 
   test "should update ficha" do
-    patch :update, id: @ficha, ficha: { abastecimento_agua: @ficha.abastecimento_agua, area: @ficha.area, bairro: @ficha.bairro, caso_doenca: @ficha.caso_doenca, cep: @ficha.cep, codigo: @ficha.codigo, comodos: @ficha.comodos, data: @ficha.data, destino_fezes_urina: @ficha.destino_fezes_urina, destino_lixo: @ficha.destino_lixo, endereco: @ficha.endereco, energia_eletrica: @ficha.energia_eletrica, meio_comunicacao: @ficha.meio_comunicacao, microarea: @ficha.microarea, municipio: @ficha.municipio, nome_plano: @ficha.nome_plano, numero: @ficha.numero, participa_cooperativa: @ficha.participa_cooperativa, participa_grupo_religioso: @ficha.participa_grupo_religioso, pessoas_plano: @ficha.pessoas_plano, plano_saude: @ficha.plano_saude, segmento: @ficha.segmento, tipocasa: @ficha.tipocasa, transporte: @ficha.transporte, tratamento_agua: @ficha.tratamento_agua }
+    patch :update, id: @ficha, ficha: { abastecimento_agua: @ficha.abastecimento_agua, area: @ficha.area, bairro: @ficha.bairro, cep: @ficha.cep, comodos: @ficha.comodos, data: @ficha.data, destino_fezes: @ficha.destino_fezes, destino_lixo: @ficha.destino_lixo, endereco: @ficha.endereco, energia_eletrica: @ficha.energia_eletrica, ficha: @ficha.ficha, micro_area: @ficha.micro_area, municipio: @ficha.municipio, numero: @ficha.numero, segmento: @ficha.segmento, tipo_casa: @ficha.tipo_casa, tratamento_agua: @ficha.tratamento_agua }
     assert_redirected_to ficha_path(assigns(:ficha))
   end
 

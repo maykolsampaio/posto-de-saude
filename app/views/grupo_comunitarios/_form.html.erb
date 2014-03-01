@@ -1,0 +1,22 @@
+<%= form_for(@grupo_comunitario) do |f| %>
+  <% if @grupo_comunitario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grupo_comunitario.errors.count, "error") %> prohibited this grupo_comunitario from being saved:</h2>
+
+      <ul>
+      <% @grupo_comunitario.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="row">
+    <div class="span1 actions">
+     <%= f.submit "Salvar", :class => 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,28 +1,13 @@
 <h1>Listing hiperdia</h1>
-<div class="row">
-<div class="span1">
-<%= link_to 'Novo', new_hiperdia_path, :class=>"btn btn-primary" %>
-</div>
-<div class="span5">
-<%= link_to 'Voltar', hiperdias_path, :class=>"btn btn-primary" %>
-</div>
-</div>
-<table class="table table-bodered table-hover display">
+<b>Doenças Cadastradas: <%= @doencas.count %></b>
+<table id="hiperdia" class="table table-bordered table-hover display">
   <thead>
     <tr>
-      <th>Numero da familia</th>
+      <th>Unidade</th>
       <th>Ano</th>
       <th>Fumante</th>
-      <th>Data da visita</th>
-      <th>Dieta</th>
-      <th>Toma medicacao</th>
-      <th>Exercicios fisicos</th>
-      <th>Pa</th>
-      <th>Licemia</th>
-      <th>Insulina</th>
-      <th>Hipoglicemiante oral</th>
-      <th>Data da ultima consulta</th>
-      <th>Obs</th>
+      <th>Mes</th>
+      <th>Pessoa</th>
       <th></th>
       <th></th>
       <th></th>
@@ -32,22 +17,12 @@
   <tbody>
     <% @hiperdia.each do |hiperdium| %>
       <tr>
-        <td><%= hiperdium.numero_da_familia %></td>
+        <td><%= hiperdium.unidade %></td>
         <td><%= hiperdium.ano %></td>
-        <td><%= hiperdium.fumante %></td>
-        <td><%= hiperdium.data_da_visita %></td>
-        <td><%= hiperdium.dieta %></td>
-        <td><%= hiperdium.toma_medicacao %></td>
-        <td><%= hiperdium.exercicios_fisicos %></td>
-        <td><%= hiperdium.pa %></td>
-        <td><%= hiperdium.licemia %></td>
-        <td><%= hiperdium.insulina %></td>
-        <td><%= hiperdium.hipoglicemiante_oral %></td>
-        <td><%= hiperdium.data_da_ultima_consulta %></td>
-        <td><%= hiperdium.obs %></td>
-        <td><%= link_to 'Show', hiperdium %></td>
-        <td><%= link_to 'Edit', edit_hiperdium_path(hiperdium) %></td>
-        <td><%= link_to 'Destroy', hiperdium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= hiperdium.pessoa.nome %></td>
+        <td><%= link_to 'Show', hiperdium, :class => 'btn btn-mini btn-info'  %></td>
+        <td><%= link_to 'Edit', edit_hiperdium_path(hiperdium), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Destroy', hiperdium, method: :delete, data: { confirm: 'Você tem certeza?' }, :class => 'btn btn-mini btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -55,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Hiperdium', new_hiperdium_path %>
+<%= link_to 'New Hiperdium', new_hiperdium_path, :class => 'btn btn-primary' %>

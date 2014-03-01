@@ -1,0 +1,26 @@
+<%= form_for(@doenca) do |f| %>
+  <% if @doenca.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@doenca.errors.count, "error") %> prohibited this doenca from being saved:</h2>
+
+      <ul>
+      <% @doenca.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %>
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="row">
+    <div class="span1 actions">
+     <%= f.submit "Salvar", :class => 'btn btn-primary' %>
+  </div>
+<% end %>

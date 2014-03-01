@@ -1,0 +1,27 @@
+<h1>Listing grupo_comunitarios</h1>
+<b>Total: <%= @grupo_comunitarios.count %></b>
+<table id="grupo_comunitarios" class="table table-bordered table-hover display">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grupo_comunitarios.each do |grupo_comunitario| %>
+      <tr>
+        <td><%= grupo_comunitario.nome %></td>
+        <td><%= link_to 'Show', grupo_comunitario %></td>
+        <td><%= link_to 'Edit', edit_grupo_comunitario_path(grupo_comunitario) %></td>
+        <td><%= link_to 'Destroy', grupo_comunitario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grupo comunitario', new_grupo_comunitario_path %>

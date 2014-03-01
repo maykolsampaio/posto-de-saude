@@ -1,11 +1,14 @@
 class FichasController < ApplicationController
-  before_filter :authenticate_user!
   before_action :set_ficha, only: [:show, :edit, :update, :destroy]
 
   # GET /fichas
   # GET /fichas.json
   def index
     @fichas = Ficha.all
+    respond_to do |format|
+      format.html
+      format.json {render json: FichasDatatable.new(view_context)}
+    end
   end
 
   # GET /fichas/1
@@ -70,6 +73,6 @@ class FichasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ficha_params
-      params.require(:ficha).permit(:codigo, :endereco, :numero, :bairro, :cep, :municipio, :segmento, :area, :microarea, :data, :tipocasa, :comodos, :energia_eletrica, :destino_lixo, :tratamento_agua, :abastecimento_agua, :destino_fezes_urina, :plano_saude, :pessoas_plano, :nome_plano, :caso_doenca, :meio_comunicacao, :participa_cooperativa, :participa_grupo_religioso, :transporte)
+      params.require(:ficha).permit(:endereco, :numero, :bairro, :cep, :municipio, :segmento, :area, :micro_area, :ficha, :data, :tipo_casa, :comodos, :energia_eletrica, :destino_lixo, :tratamento_agua, :abastecimento_agua, :destino_fezes)
     end
 end

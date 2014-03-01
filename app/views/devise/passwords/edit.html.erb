@@ -10,7 +10,7 @@
   <div><%= f.label :password_confirmation, "Confirme nova senha" %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Mudar minha senha" %></div>
+  <div><%= f.submit "Mudar minha senha", :class => 'btn btn-primary' %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>

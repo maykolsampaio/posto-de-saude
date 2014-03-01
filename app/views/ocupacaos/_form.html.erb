@@ -1,0 +1,22 @@
+<%= form_for(@ocupacao) do |f| %>
+  <% if @ocupacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ocupacao.errors.count, "error") %> prohibited this ocupacao from being saved:</h2>
+
+      <ul>
+      <% @ocupacao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="row">
+    <div class="span1 actions">
+     <%= f.submit "Salvar", :class => 'btn btn-primary' %>
+  </div>
+<% end %>
